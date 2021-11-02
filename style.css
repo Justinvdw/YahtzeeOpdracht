@@ -3,33 +3,15 @@
     padding: 0;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   table {
     width: 800px;
     background: #fff;
-    border: 1px solid #000;
+    border: 0px solid #000;
   }
-
-  .front .dot1 { top: 42.5%; left: 42.5%; }
-.back .dot1 { top: 22.5%; left: 22.5%; }
-.back .dot2 { top: 62.5%; left: 62.5%; }
-.right .dot1 { top: 22.5%; left: 22.5%; }
-.right .dot2 { top: 42.5%; left: 42.5%; }
-.right .dot3 { top: 62.5%; left: 62.5%; }
-.left .dot1 { top: 22.5%; left: 22.5%; }
-.left .dot2 { top: 22.5%; left: 62.5%; }
-.left .dot3 { top: 62.5%; left: 22.5%; }
-.left .dot4 { top: 62.5%; left: 62.5%; }
-.top .dot1 { top: 22.5%; left: 22.5%; }
-.top .dot2 { top: 22.5%; left: 62.5%; }
-.top .dot3 { top: 42.5%; left: 42.5%; }
-.top .dot4 { top: 62.5%; left: 22.5%; }
-.top .dot5 { top: 62.5%; left: 62.5%; }
-.bottom .dot1 { top: 22.5%; left: 22.5%; }
-.bottom .dot2 { top: 22.5%; left: 42.5%; }
-.bottom .dot3 { top: 22.5%; left: 62.5%; }
-.bottom .dot4 { top: 62.5%; left: 22.5%; }
-.bottom .dot5 { top: 62.5%; left: 42.5%; }
-.bottom .dot6 { top: 62.5%; left: 62.5%; }
 
 .scoresheet {
     clear: both;
