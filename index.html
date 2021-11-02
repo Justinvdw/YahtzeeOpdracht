@@ -4,9 +4,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    <button id="roll">Click here to roll the dice</button>
+
+  <p>Click a die to hold it</p>
+
+  <p>Rolls left: <span id="turns">3</span></p>
+
+  <div class="yahtzee-board clearfix">
+    <section id="die1" class="container">
+      <div class="cube">
+          <img src="images/dice_1.jpg" alt="">
+      </div>
+    </section>  
+
+    <section id="die2" class="container">
+      <div class="cube">
+        <img src="images/dice_1.jpg" alt="">
+      </div>
+    </section>  
+
+    <section id="die3" class="container">
+      <div class="cube">
+        <img src="images/dice_1.jpg" alt="">
+      </div>
+    </section>  
+
+    <section id="die4" class="container">
+      <div class="cube">
+        <img src="images/dice_1.jpg" alt="">
+      </div>
+    </section>  
+
+    <section id="die5" class="container">
+      <div class="cube">
+        <img src="images/dice_1.jpg" alt="">
+      </div>
+    </section>  
+  </div>
+
+  <div class="scoresheet">
+    <table>
+      <thead>
+        <tr>
+          <th>UPPER SECTION</th>
+          <th>HOW TO<br>SCORE</th>
+          <th>GAME #1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Aces</td>
+          <td>Count and Add<br>Only Aces</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Twos</td>
+          <td>Count and Add<br>Only Twos</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Threes</td>
+          <td>Count and Add<br>Only Threes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Fours</td>
+          <td>Count and Add<br>Only Fours</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Fives</td>
+          <td>Count and Add<br>Only Fives</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Sixes</td>
+          <td>Count and Add<br>Only Sixes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>TOTAL SCORE</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BONUS</td>
+          <td>Score 35</td>
+        </tr>
+        <tr>
+          <td>TOTAL</td>
+          <td></td>
+        </tr>
+        <tr class="noborder">
+          <td colspan="8">LOWER SECTION</td>
+        </tr>
+        <tr>
+          <td>3 of a kind</td>
+          <td>Add total of all dice</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4 of a kind</td>
+          <td>Add total of all dice</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Full house</td>
+          <td>Score 25</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Small straight</td>
+          <td>Score 30</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Large straight</td>
+          <td>Score 40</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>YAHTZEE</td>
+          <td>Score 50</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Chance</td>
+          <td>Score total of all 5 dice</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>YAHTZEE BONUS #1</td>
+          <td>Score 100</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>YAHTZEE BONUS #2</td>
+          <td>Score 100</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>YAHTZEE BONUS #3</td>
+          <td>Score 100</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>LOWER TOTAL</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>UPPER TOTAL</td>
+          <td></td>
+        </tr>       
+        <tr>
+          <td>GRAND TOTAL</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 </html>
