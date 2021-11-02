@@ -1,19 +1,32 @@
 // Justin
+
+
+// gegooide stenen array
 let punten = [];
 
+// hoeveel ... is er gegooit?
 let  een = 0;
 let twee = 0;
 let drie = 0;
 let vier = 0;
 let vijf = 0;
 
-function gooien() {
-    punten[0] = dobbelsteen();
-    punten[1] = dobbelsteen();
-    punten[2] = dobbelsteen();
-    punten[3] = dobbelsteen();
-    punten[4] = dobbelsteen();
+// totaal aantal ogen gegooit
+let totaal = 0;
 
+// hoevaak nog worpen
+let worpenover = 3;
+
+// staat ... vast?
+let steen1vast = false;
+let steen2vast = false;
+let steen3vast = false;
+let steen4vast = false;
+let steen5vast = false;
+
+
+// kijkt hoeveel keer welke ogen zijn gegooit
+function count() {
     punten.forEach(element => {
         if (element == 1) {  een++; }
         if (element == 2) { twee++; }
@@ -21,6 +34,41 @@ function gooien() {
         if (element == 4) { vier++; }
         if (element == 5) { vijf++; }
     });
+}
+
+// alles gooien
+function gooien() {
+
+    if (worpenover > 0) {
+        if (steen1vast == false) {
+            punten[0] = dobbelsteen();
+        }
+        if (steen2vast == false) {
+            punten[1] = dobbelsteen();
+        }
+        if (steen3vast == false) {
+            punten[2] = dobbelsteen();
+        }
+        if (steen4vast == false) {
+            punten[3] = dobbelsteen();
+        }
+        if (steen5vast == false) {
+            punten[4] = dobbelsteen();
+        }
+        count();
+
+        totaal = een + twee + drie + vier + vijf;
+    
+        steen1vast = false;
+        steen2vast = false;
+        steen3vast = false;
+        steen4vast = false;
+        steen5vast = false;
+
+        worpenover--;
+    } else if (worpenover == 0) {
+        // geen worpen over
+    }
 }
 
 gooien();
