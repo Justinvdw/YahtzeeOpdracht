@@ -4,6 +4,17 @@
 // gegooide stenen array
 let punten = [];
 
+function veranderfoto() 
+{
+    for (let i = 0; i < 5; i++) {
+        if (punten[i] == 1) { document.getElementById(i.toString()).src = "images/dice_1.jpg"; } 
+        if (punten[i] == 2) { document.getElementById(i.toString()).src = "images/dice_2.jpg"; } 
+        if (punten[i] == 3) { document.getElementById(i.toString()).src = "images/dice_3.jpg"; } 
+        if (punten[i] == 4) { document.getElementById(i.toString()).src = "images/dice_4.jpg"; } 
+        if (punten[i] == 5) { document.getElementById(i.toString()).src = "images/dice_5.jpg"; }  
+    }
+}
+
 let een = 0;
 let twee = 0;
 let drie = 0;
@@ -44,10 +55,8 @@ function count() {
         }
     });
 }
-
 // alles gooien
-function gooien() {
-
+function gooien() { 
     if (worpenover > 0) {
         if (steen1vast == false) {
             punten[0] = dobbelsteen();
@@ -68,19 +77,48 @@ function gooien() {
 
         totaal = een + twee + drie + vier + vijf;
     
-        steen1vast = false;
-        steen2vast = false;
-        steen3vast = false;
-        steen4vast = false;
-        steen5vast = false;
+ //       steen1vast = false;
+ //       steen2vast = false;
+ //       steen3vast = false;
+ //       steen4vast = false;
+ //       steen5vast = false;
 
         worpenover--;
+        document.getElementById("worpen").innerHTML = worpenover.toString();
+        veranderfoto();
+        if (worpenover == 1) {
+        document.getElementById("gooi").innerHTML = "reset spel";
+
     } else if (worpenover == 0) {
-        // geen worpen over
+        reset();
     }
 }
+}
 
-gooien();
+// reset het hele spel
+function reset() {
+    punten[0] = 0;
+    punten[1] = 0;
+    punten[2] = 0;
+    punten[3] = 0;
+    punten[4] = 0;
+    een = 0;
+    twee = 0;
+    drie = 0;
+    vier = 0;
+    vijf = 0;
+    totaal = 0;
+    worpenover = 3;
+
+    steen1vast = false;
+    steen2vast = false;
+    steen3vast = false;
+    steen4vast = false;
+    steen5vast = false;
+    veranderfoto();
+    document.getElementById("gooi").innerHTML = "Click here to roll the dice";
+    document.getElementById("worpen").innerHTML = worpenover.toString();
+}
 
 document.write("<p> je hebt dit gegooit: " +
     punten[0] + ", " +
