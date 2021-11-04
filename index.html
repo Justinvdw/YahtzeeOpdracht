@@ -8,165 +8,165 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="gooi" onclick="gooien();">Click here to roll the dice</button>
+<button id="gooi" onclick="gooien();">Click here to roll the dice</button>
 
-  <p>Click a die to hold it</p>
+<p>Click a die to hold it</p>
 
-  <p>Rolls left: <span id="worpen">3</span></p>
+<p>Rolls left: <span id="worpen">3</span></p>
 
-  <div class="yahtzee-board clearfix">
+<div class="yahtzee-board clearfix">
     <section id="die1" class="container">
-      <div class="cube">
-        <img src="images/dice_1.jpg" alt="" id="0" onclick="hold(steen1vast);">
-      </div>
-    </section>  
+        <div class="cube">
+            <img src="images/dice_1.jpg" alt="" id="0" onclick="steen1vast = true;">
+        </div>
+    </section>
 
     <section id="die2" class="container">
-      <div class="cube">
-        <img src="images/dice_1.jpg" alt="" id="1" onclick="steen2vast = true;">
-      </div>
-    </section>  
+        <div class="cube">
+            <img src="images/dice_1.jpg" alt="" id="1" onclick="steen2vast = true;">
+        </div>
+    </section>
 
     <section id="die3" class="container">
-      <div class="cube">
-        <img src="images/dice_1.jpg" alt="" id="2" onclick="steen3vast = true;">
-      </div>
-    </section>  
+        <div class="cube">
+            <img src="images/dice_1.jpg" alt="" id="2" onclick="steen3vast = true;">
+        </div>
+    </section>
 
     <section id="die4" class="container">
-      <div class="cube">
-        <img src="images/dice_1.jpg" alt="" id="3" onclick="steen4vast = true;">
-      </div>
-    </section>  
+        <div class="cube">
+            <img src="images/dice_1.jpg" alt="" id="3" onclick="steen4vast = true;">
+        </div>
+    </section>
 
     <section id="die5" class="container">
-      <div class="cube">
-        <img src="images/dice_1.jpg" alt="" id="4" onclick="steen5vast = true;">
-      </div>
-    </section>  
-  </div>
+        <div class="cube">
+            <img src="images/dice_1.jpg" alt="" id="4" onclick="steen5vast = true;">
+        </div>
+    </section>
+</div>
 
-  <div class="scoresheet">
+<div class="scoresheet">
     <table>
-      <thead>
+        <thead>
         <tr>
-          <th>UPPER SECTION</th>
-          <th>HOW TO<br>SCORE</th>
-          <th>GAME #1</th>
+            <th>UPPER SECTION</th>
+            <th>HOW TO<br>SCORE</th>
+            <th>GAME #1</th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <tr>
-          <td>Aces</td>
-          <td>Count and Add<br>Only Aces</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Twos</td>
-          <td>Count and Add<br>Only Twos</td>
-          <td></td>
+            <td>Aces</td>
+            <td>Count and Add<br>Only Aces</td>
+            <td></td>
         </tr>
         <tr>
-          <td>Threes</td>
-          <td>Count and Add<br>Only Threes</td>
-          <td></td>
+            <td>Twos</td>
+            <td>Count and Add<br>Only Twos</td>
+            <td></td>
         </tr>
         <tr>
-          <td>Fours</td>
-          <td>Count and Add<br>Only Fours</td>
-          <td></td>
+            <td>Threes</td>
+            <td>Count and Add<br>Only Threes</td>
+            <td></td>
         </tr>
         <tr>
-          <td>Fives</td>
-          <td>Count and Add<br>Only Fives</td>
-          <td></td>
+            <td>Fours</td>
+            <td>Count and Add<br>Only Fours</td>
+            <td></td>
         </tr>
         <tr>
-          <td>Sixes</td>
-          <td>Count and Add<br>Only Sixes</td>
-          <td></td>
+            <td>Fives</td>
+            <td>Count and Add<br>Only Fives</td>
+            <td></td>
         </tr>
         <tr>
-          <td>TOTAL SCORE</td>
-          <td></td>
+            <td>Sixes</td>
+            <td>Count and Add<br>Only Sixes</td>
+            <td></td>
         </tr>
         <tr>
-          <td>BONUS</td>
-          <td>Score 35</td>
+            <td>TOTAL SCORE</td>
+            <td></td>
         </tr>
         <tr>
-          <td>TOTAL</td>
-          <td></td>
+            <td>BONUS</td>
+            <td>Score 35</td>
+        </tr>
+        <tr>
+            <td>TOTAL</td>
+            <td id="total"></td>
         </tr>
         <tr class="noborder">
-          <td colspan="8">LOWER SECTION</td>
+            <td colspan="8">LOWER SECTION</td>
         </tr>
         <tr>
-          <td>3 of a kind</td>
-          <td>Add total of all dice</td>
-          <td></td>
+            <td>3 of a kind</td>
+            <td>Add total of all dice</td>
+            <td id="3ofakind"></td>
         </tr>
         <tr>
-          <td>4 of a kind</td>
-          <td>Add total of all dice</td>
-          <td></td>
+            <td>4 of a kind</td>
+            <td>Add total of all dice</td>
+            <td id="4ofakind"></td>
         </tr>
         <tr>
-          <td>Full house</td>
-          <td>Score 25</td>
-          <td></td>
+            <td>Full house</td>
+            <td>Score 25</td>
+            <td id="fullhouse"></td>
         </tr>
         <tr>
-          <td>Small straight</td>
-          <td>Score 30</td>
-          <td></td>
+            <td>Small straight</td>
+            <td>Score 30</td>
+            <td id="smallstraight"></td>
         </tr>
         <tr>
-          <td>Large straight</td>
-          <td>Score 40</td>
-          <td></td>
+            <td>Large straight</td>
+            <td>Score 40</td>
+            <td id="largestraight"></td>
         </tr>
         <tr>
-          <td>YAHTZEE</td>
-          <td>Score 50</td>
-          <td></td>
+            <td>YAHTZEE</td>
+            <td>Score 50</td>
+            <td id="yahtzee"></td>
         </tr>
         <tr>
-          <td>Chance</td>
-          <td>Score total of all 5 dice</td>
-          <td></td>
+            <td>Chance</td>
+            <td>Score total of all 5 dice</td>
+            <td id="chance"></td>
         </tr>
         <tr>
-          <td>YAHTZEE BONUS #1</td>
-          <td>Score 100</td>
-          <td></td>
+            <td>YAHTZEE BONUS #1</td>
+            <td>Score 100</td>
+            <td id="yahtzeebonus1"></td>
         </tr>
         <tr>
-          <td>YAHTZEE BONUS #2</td>
-          <td>Score 100</td>
-          <td></td>
+            <td>YAHTZEE BONUS #2</td>
+            <td>Score 100</td>
+            <td id="yahtzeebonus2"></td>
         </tr>
         <tr>
-          <td>YAHTZEE BONUS #3</td>
-          <td>Score 100</td>
-          <td></td>
+            <td>YAHTZEE BONUS #3</td>
+            <td>Score 100</td>
+            <td id="yahtzeebonus3"></td>
         </tr>
         <tr>
-          <td>LOWER TOTAL</td>
-          <td></td>
+            <td>LOWER TOTAL</td>
+            <td id="lowertotal"></td>
         </tr>
         <tr>
-          <td>UPPER TOTAL</td>
-          <td></td>
-        </tr>       
-        <tr>
-          <td>GRAND TOTAL</td>
-          <td></td>
+            <td>UPPER TOTAL</td>
+            <td  id="uppertotal"></td>
         </tr>
-      </tbody>
+        <tr>
+            <td>GRAND TOTAL</td>
+            <td id="grandtotal"></td>
+        </tr>
+        </tbody>
     </table>
-  </div>
-  <script src="script.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</div>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 </html>

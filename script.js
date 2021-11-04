@@ -4,14 +4,23 @@
 // gegooide stenen array
 let punten = [];
 
-function veranderfoto() 
-{
+function veranderfoto() {
     for (let i = 0; i < 5; i++) {
-        if (punten[i] == 1) { document.getElementById(i.toString()).src = "images/dice_1.jpg"; } 
-        if (punten[i] == 2) { document.getElementById(i.toString()).src = "images/dice_2.jpg"; } 
-        if (punten[i] == 3) { document.getElementById(i.toString()).src = "images/dice_3.jpg"; } 
-        if (punten[i] == 4) { document.getElementById(i.toString()).src = "images/dice_4.jpg"; } 
-        if (punten[i] == 5) { document.getElementById(i.toString()).src = "images/dice_5.jpg"; }  
+        if (punten[i] == 1) {
+            document.getElementById(i.toString()).src = "images/dice_1.jpg";
+        }
+        if (punten[i] == 2) {
+            document.getElementById(i.toString()).src = "images/dice_2.jpg";
+        }
+        if (punten[i] == 3) {
+            document.getElementById(i.toString()).src = "images/dice_3.jpg";
+        }
+        if (punten[i] == 4) {
+            document.getElementById(i.toString()).src = "images/dice_4.jpg";
+        }
+        if (punten[i] == 5) {
+            document.getElementById(i.toString()).src = "images/dice_5.jpg";
+        }
     }
 }
 
@@ -55,13 +64,14 @@ function count() {
         }
     });
 }
+
 // hold functie
-function hold(h) 
-{
-    h = true 
+function hold(h) {
+    h = true
 }
+
 // alles gooien
-function gooien() { 
+function gooien() {
     if (worpenover > 0) {
         if (steen1vast == false) {
             punten[0] = dobbelsteen();
@@ -81,23 +91,23 @@ function gooien() {
         count();
 
         totaal = een + twee + drie + vier + vijf;
-    
- //       steen1vast = false;
- //       steen2vast = false;
- //       steen3vast = false;
- //       steen4vast = false;
- //       steen5vast = false;
+
+        //       steen1vast = false;
+        //       steen2vast = false;
+        //       steen3vast = false;
+        //       steen4vast = false;
+        //       steen5vast = false;
 
         worpenover--;
         document.getElementById("worpen").innerHTML = worpenover.toString();
         veranderfoto();
         if (worpenover == 1) {
-        document.getElementById("gooi").innerHTML = "reset spel";
+            document.getElementById("gooi").innerHTML = "reset spel";
 
-    } else if (worpenover == 0) {
-        reset();
+        } else if (worpenover == 0) {
+            reset();
+        }
     }
-}
 }
 
 // reset het hele spel
@@ -112,6 +122,7 @@ function reset() {
     drie = 0;
     vier = 0;
     vijf = 0;
+    zes = 0;
     totaal = 0;
     worpenover = 3;
 
@@ -146,17 +157,18 @@ function dobbelsteen() {
 
 function calcYahtzee() {
     let found = false;
-    for (let i=1; i<7; i++) {
+    for (let i = 1; i < 7; i++) {
         if (this.punten[i] == 5) {
             found = true;
             break;
         }
     }
+    document.getElementById("yahtzee").innerHTML = value.toString();
 }
 
 function calcStraight(num, obj, value) {
     let count = 0;
-    for (let i=1; i<7; i++) {
+    for (let i = 1; i < 7; i++) {
         if (this.punten[i]) {
             count++
             if (count >= num) {
@@ -165,26 +177,25 @@ function calcStraight(num, obj, value) {
                 count = 0;
             }
         }
-        // Set preview logic
+        document.getElementById("largestraight").innerHTML = value.toString();
     }
 }
 
 function calcFullHouse() {
     let three = false, two = false;
 
-    for (let i=1; i<7; i++) {
+    for (let i = 1; i < 7; i++) {
         if (this.punten[i] * i >= i * 3) {
             three = i;
         }
     }
-
-    // set preview logic (FULLHOUSE)
+    document.getElementById("fullhouse").innerHTML = value.toString();
 }
 
 function calcChance() {
     let value = 0;
-    for (let i=1; i<7; i++) {
+    for (let i = 1; i < 7; i++) {
         value += this.punten[i] * i;
     }
-    // preview LOGIC (CHANCE)
+    document.getElementById("chance").innerHTML = value.toString();
 }
