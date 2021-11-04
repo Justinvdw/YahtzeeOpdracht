@@ -55,6 +55,11 @@ function count() {
         }
     });
 }
+// hold functie
+function hold(h) 
+{
+    h = true 
+}
 // alles gooien
 function gooien() { 
     if (worpenover > 0) {
